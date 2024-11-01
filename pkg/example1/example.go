@@ -16,7 +16,7 @@ var _ framework.FilterPlugin = &ExamplePlugin{}
 type ExamplePlugin struct{}
 
 // NewExampleSchedPlugin initializes a new plugin and returns it.
-func NewExamplePlugin(_ runtime.Object, _ framework.Handle) (framework.Plugin, error) {
+func New(_ context.Context, _ runtime.Object, _ framework.Handle) (framework.Plugin, error) {
 	return &ExamplePlugin{}, nil
 }
 
